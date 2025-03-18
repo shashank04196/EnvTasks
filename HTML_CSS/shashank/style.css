@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(220, 238, 243), #003366);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.pricing-table {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plan {
+    background-color: #caf8f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 250px;
+    text-align: center;
+}
+
+.plan h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.plan .price {
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan ul li {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.plan ul li .check {
+    margin-right: 8px;
+}
+
+.plan ul li .cross {
+    margin-right: 8px;
+}
+
+.plan button {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan button:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid orange;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 760px) {
+    .plan {
+        max-width: 80%;
+    }
+}

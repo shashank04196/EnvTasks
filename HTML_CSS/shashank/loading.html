@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Concentric Circle Loader</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: none;
+        }
+        
+        .loader {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+        
+        .outer {
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #ff7e5f, #f66c03);
+            opacity: 0.7;
+            animation: shrink 2s infinite ease-in-out;
+        }
+        
+        .inner {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #cb1111, #fc256d);
+            top: 75px;
+            left: 75px;
+            animation: grow 2s infinite ease-in-out;
+        }
+        
+        @keyframes grow {
+            0%,
+            100% {
+                width: 50px;
+                height: 50px;
+                top: 75px;
+                left: 75px;
+            }
+            50% {
+                width: 120px;
+                height: 120px;
+                top: 40px;
+                left: 40px;
+            }
+        }
+        
+        @keyframes shrink {
+            0%,
+            100% {
+                width: 200px;
+                height: 200px;
+                top: 0;
+                left: 0;
+            }
+            50% {
+                width: 120px;
+                height: 120px;
+                top: 40px;
+                left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="circle outer"></div>
+        <div class="circle inner"></div>
+    </div>
+
+</body>
+
+</html>
